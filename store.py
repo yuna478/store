@@ -1,4 +1,5 @@
-import os 
+import os
+pro=[] 
 while 1:
      print(" ____________________________ \n"
           "|                            |\n"
@@ -21,9 +22,23 @@ while 1:
           "|      3- show               |\n"
           "|                            |\n"
           "|____________________________|\n")
-               pass
+          a= input ('your choice:')
+          if a=='3':
+               print(pro)
+          elif a=='2':
+               print('under development')
+          elif a=='1':
+               while 1:
+                         a= input("enter in order: size, price ,tag, color")
+                         pro .append(a)
+                         pass
+          elif a=='E' or a=='e' :
+                         exit(0)
+          else:
+                         print("incorrect input")
+                         pass
      elif a=='E' or a=='e' :
           exit(0)
      else:
           print("incorrect input")
-# asdfgjkl
+# https://github.com/yuna478/store

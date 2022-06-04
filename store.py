@@ -1,5 +1,6 @@
 import os
-pro=[] 
+pro={}
+id=0
 while 1:
      print(" ____________________________ \n"
           "|                            |\n"
@@ -25,19 +26,52 @@ while 1:
           "|____________________________|\n")
                a= input ('your choice:')
                if a=='3':
-                    print(pro)
+                    for prod in range(1,len(pro)+1):
+                         pr=str(prod)
+                         print(pr+'- size: '+ pro[pr]['size']+ ', brand: '+ pro[pr]['brand']+ ', price: '+ pro[pr]['price']+ ', color: '+ pro[pr]['color'])
                elif a=='2':
                     print('under development')
+               elif a=='4':
+                    a = input('enter the id of the product you want to edit: ')
+                    if a not in pro.keys():
+                         print('incorrect id')
+                         a = input('enter the id of the product you want to edit: ')
+                         if a not in pro.keys():
+                              print('incorrect id')
+                    os.system('cls')
+                    print(" ____________________________ \n"
+                         "|                            |\n"
+                         "|  what do you want to edit  |\n"
+                         "|      1- size               |\n"
+                         "|      2- brand              |\n"
+                         "|      3- price              |\n"
+                         "|      4- color              |\n"
+                         "|____________________________|\n")
+                    b=input('your choice: ')
+                    if b=='1':
+                         c= input('enter new size: ')
+                         pro[a]['size']=c
+                    elif b=='2':
+                         c= input('enter new brand: ')
+                         pro[a]['brand']=c
+                    elif b=='3':
+                         c= input('enter new price: ')
+                         pro[a]['price']=c
+                    elif b=='4':
+                         c= input('enter new color: ')
+                         pro[a]['color']=c
+                    else:
+                         print('incorrect input, please retry editing')
+
+               elif a=='b':
+                    break
                elif a=='1':
-                    pro.append(str(len(pro)+1)+'- ')
-                    a= input("enter size: ")
-                    pro[-1]=pro[-1]+"size= "+a
-                    a= input("enter brand: ")
-                    pro[-1]=pro[-1]+", brand= "+a
-                    a= input("enter price: ")
-                    pro[-1]=pro[-1]+", price= "+a
-                    a= input("enter color: ")
-                    pro[-1]=pro[-1]+", color= "+a
+                    id+=1
+                    size= input("enter size: ")
+                    brand= input("enter brand: ")
+                    price= input("enter price: ")
+                    color= input("enter color: ")
+                    pro.update({str(id):{'size': size, 'brand': brand, 'price': price, 'color': color}})
                elif a=='E' or a=='e' :
                               exit(0)
                else:

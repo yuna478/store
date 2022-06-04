@@ -1,3 +1,7 @@
+
+# github link:
+# https://github.com/yuna478/store
+
 import os
 pro={}
 id=0
@@ -170,4 +174,3 @@ while 1:
           exit(0)
      else:
           print("incorrect input")
-# https://github.com/yuna478/store

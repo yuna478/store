@@ -130,7 +130,7 @@ while 1:
           while 1:
                print(" ____________________________ \n"
                     "|                            |\n"
-                    "|      1- add                |\n"
+                    "|      1- show                |\n"
                     "|                            |\n"
                     "|     b- back  e- exit       |\n"
                     "|____________________________|\n")
@@ -138,7 +138,7 @@ while 1:
                if a=='b':
                     break
                elif a=='1':
-                    add()
+                    show()
                elif a=='E' or a=='e' :
                     exit(0)
                else:
